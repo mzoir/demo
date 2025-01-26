@@ -10,8 +10,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.Objects;
-=======
->>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 
 public class SecriteControle {
     public void handleRendezVous(ActionEvent actionEvent) {
