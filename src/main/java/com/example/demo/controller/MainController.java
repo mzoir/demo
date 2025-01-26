@@ -35,12 +35,11 @@ public class MainController {
         System.out.println("Navigating to Appointments Page");
         // Add your navigation logic here
     }
-<<<<<<< HEAD
 
     @FXML
     private void goToLoginPageAdmi(ActionEvent event) {
         try {
-            Parent loginPageParent = FXMLLoader.load(getClass().getResource("/com/example/demo/LoginPage.fxml"));
+            Parent loginPageParent = FXMLLoader.load(getClass().getResource("/com/example/demo/Logadmin.fxml"));
             Scene loginPageScene = new Scene(loginPageParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(loginPageScene);
@@ -49,6 +48,4 @@ public class MainController {
             e.printStackTrace();
         }
     }
-=======
->>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 }

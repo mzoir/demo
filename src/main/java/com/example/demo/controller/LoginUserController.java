@@ -93,4 +93,26 @@ public class LoginUserController {
             e.printStackTrace();
         }
     }
+
+    public void handleLoginadmi(ActionEvent actionEvent) {
+        try {
+            System.out.println("Back button clicked!");
+            // Load the MainPage.fxml file
+            Parent mainPageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/demo/adminconsole.fxml")));
+
+            // Create a new scene with the loaded layout
+            Scene mainPageScene = new Scene(mainPageParent);
+
+            // Get the current stage (window) from the event source
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            // Set the new scene to the current stage
+            window.setScene(mainPageScene);
+
+            // Show the updated stage
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
