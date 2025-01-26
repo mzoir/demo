@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import javafx.event.ActionEvent;
+<<<<<<< HEAD
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.Objects;
+=======
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 
 public class SecriteControle {
     public void handleRendezVous(ActionEvent actionEvent) {
@@ -19,6 +22,7 @@ public class SecriteControle {
 
     public void goToPatientPage(ActionEvent actionEvent) {
     }
+<<<<<<< HEAD
     // Method to handle "Gérer Paiements"
     public void handlePaiements() {
         // Add your logic for managing payments
@@ -55,4 +59,6 @@ public class SecriteControle {
             e.printStackTrace();
         }
     }
+=======
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 }

@@ -9,16 +9,24 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.demo.controller.SecriteControle"
+<<<<<<< HEAD
             prefHeight="400.0" prefWidth="600.0"
             stylesheets="@styles.css"
 >
+=======
+            prefHeight="400.0" prefWidth="600.0">
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 
     <children>
         <!-- Add a VBox to act as a bordered container (cadre) for Menu Console -->
         <VBox AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" styleClass="vbox-cadre">
             <!-- Label for Menu Console -->
             <Label text="Menu Secretaire Console" styleClass="label-menu" alignment="CENTER" />
+<<<<<<< HEAD
             <Separator styleClass="separator" />
+=======
+            <Separator />
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
         </VBox>
 
         <!-- Centering the StackPane -->
@@ -32,8 +40,11 @@
 
                 <!-- Button to manage medical records -->
                 <Button text="Gérer Fiche Médicale" onAction="#goToMedicalRecordPage" styleClass="button-action"/>
+<<<<<<< HEAD
                 <Button text="Back" onAction="#backMain" style="-fx-background-color: #4A90E2; -fx-text-fill: white; -fx-font-weight: bold;" />
 
+=======
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 
             </VBox>
         </StackPane>

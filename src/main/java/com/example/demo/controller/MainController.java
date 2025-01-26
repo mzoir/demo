@@ -35,6 +35,7 @@ public class MainController {
         System.out.println("Navigating to Appointments Page");
         // Add your navigation logic here
     }
+<<<<<<< HEAD
 
     @FXML
     private void goToLoginPageAdmi(ActionEvent event) {
@@ -48,4 +49,6 @@ public class MainController {
             e.printStackTrace();
         }
     }
+=======
+>>>>>>> 0b7a67bcc93bbc79a5abc527e5d8dffc42018aeb
 }
