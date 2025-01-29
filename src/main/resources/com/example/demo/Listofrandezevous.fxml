@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.controller.Listofrandezevous"
+>
+    <Label text="Rendez-Vous" styleClass="label-menu" alignment="CENTER" />
+    <Separator />
+
+    <!-- Add a ListView to display the rendezvous -->
+    <ListView fx:id="rendezvousListView"
+              AnchorPane.topAnchor="40" AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="100"
+              prefWidth="560" prefHeight="360"/>
+
+    <!-- Add Confirm Rendezvous Button -->
+    <Button text="Confirmer Rendez-Vous"
+            fx:id="confirmRendezvousButton"
+            AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20"
+            AnchorPane.rightAnchor="20"
+            onAction="#handleConfirmRendezvous"
+            styleClass="button-action"/>
+
+</AnchorPane>

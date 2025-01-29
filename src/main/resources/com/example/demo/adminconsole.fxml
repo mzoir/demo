@@ -25,7 +25,7 @@
         <StackPane AnchorPane.topAnchor="80" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
             <VBox spacing="20" alignment="CENTER" styleClass="vbox-content">
                 <!-- Button to manage appointments -->
-                <Button text="Gérer Rendez-Vous" onAction="#handleRendezVous" styleClass="button-action"/>
+                <Button text="Gérer Rendez-Vous" onAction="#handleRendezVousList" styleClass="button-action"/>
 
                 <!-- Button to manage patients -->
                 <Button text="Gérer Patient" onAction="#goToPatientPage" styleClass="button-action"/>

@@ -12,6 +12,21 @@ import java.util.Objects;
 
 public class SecriteControle {
     public void handleRendezVous(ActionEvent actionEvent) {
+
+        try {
+            Parent loginPageParent = FXMLLoader.load(getClass().getResource("/com/example/demo/RendezVousPage.fxml"));
+            Scene loginPageScene = new Scene(loginPageParent);
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            window.setScene(loginPageScene);
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
     }
 
     public void goToMedicalRecordPage(ActionEvent actionEvent) {
@@ -39,6 +54,28 @@ public class SecriteControle {
             System.out.println("Back button clicked!");
             // Load the MainPage.fxml file
             Parent mainPageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/demo/MainPage.fxml")));
+
+            // Create a new scene with the loaded layout
+            Scene mainPageScene = new Scene(mainPageParent);
+
+            // Get the current stage (window) from the event source
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            // Set the new scene to the current stage
+            window.setScene(mainPageScene);
+
+            // Show the updated stage
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void handleRendezVousList(ActionEvent actionEvent) {
+        try {
+            System.out.println("Back button clicked!");
+            // Load the MainPage.fxml file
+            Parent mainPageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/demo/Listofrandezevous.fxml")));
 
             // Create a new scene with the loaded layout
             Scene mainPageScene = new Scene(mainPageParent);
