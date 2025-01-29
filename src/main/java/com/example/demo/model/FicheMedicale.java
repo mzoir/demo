@@ -1,67 +1,31 @@
 package com.example.demo.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import javafx.beans.property.*;
+
+import java.time.LocalDate;
 
 public class FicheMedicale {
-    private int id;
-    private int patientId;
-    private String description;
+    private final IntegerProperty id;
+    private final IntegerProperty patientId;
+    private final StringProperty description;
+    private final StringProperty dateCreation;
 
-    // Static list to hold all medical records
-    private static List<FicheMedicale> ficheMedicaleList = new ArrayList<>();
-
-    // Constructor
-    public FicheMedicale(int id, int patientId, String description) {
-        this.id = id;
-        this.patientId = patientId;
-        this.description = description;
+    public FicheMedicale(int id, int patientId, String description, String dateCreation, LocalDate date) {
+        this.id = new SimpleIntegerProperty(id);
+        this.patientId = new SimpleIntegerProperty(patientId);
+        this.description = new SimpleStringProperty(description);
+        this.dateCreation = new SimpleStringProperty(dateCreation);
     }
 
-    // Methods to manage the list of medical records
-    public static void addFicheMedicale(FicheMedicale ficheMedicale) {
-        ficheMedicaleList.add(ficheMedicale);
-    }
+    public int getId() { return id.get(); }
+    public IntegerProperty idProperty() { return id; }
 
-    public static void removeFicheMedicale(FicheMedicale ficheMedicale) {
-        ficheMedicaleList.remove(ficheMedicale);
-    }
+    public int getPatientId() { return patientId.get(); }
+    public IntegerProperty patientIdProperty() { return patientId; }
 
-    public static List<FicheMedicale> getFicheMedicaleList() {
-        return ficheMedicaleList;
-    }
+    public String getDescription() { return description.get(); }
+    public StringProperty descriptionProperty() { return description; }
 
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "FicheMedicale{" +
-                "id=" + id +
-                ", patientId=" + patientId +
-                ", description='" + description + '\'' +
-                '}';
-    }
+    public String getDateCreation() { return dateCreation.get(); }
+    public StringProperty dateCreationProperty() { return dateCreation; }
 }

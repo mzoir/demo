@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.PatientController">
+    <Label text="Gestion des Patients" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="patientTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="nomColumn" text="Nom" />
+            <TableColumn fx:id="prenomColumn" text="Prénom" />
+            <TableColumn fx:id="dateNaissanceColumn" text="Date de Naissance" />
+            <TableColumn fx:id="sexeColumn" text="Sexe" />
+            <TableColumn fx:id="numTelColumn" text="Numéro Téléphone" />
+            <TableColumn fx:id="adresseColumn" text="Adresse" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <TextField fx:id="nomField" promptText="Nom" />
+            <TextField fx:id="prenomField" promptText="Prénom" />
+            <DatePicker fx:id="dateNaissanceField" promptText="Date de naissance" />
+            <ComboBox fx:id="sexeField">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Homme" />
+                        <String fx:value="Femme" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <TextField fx:id="numTelField" promptText="Numéro Téléphone" />
+            <TextArea fx:id="adresseField" promptText="Adresse" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Ajouter Patient" onAction="#ajouterPatient" />
+        <Button text="Supprimer Patient" onAction="#supprimerPatient" />
+        <Button text="retour" onAction="#backMain" />
+    </HBox>
+</VBox>

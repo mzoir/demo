@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.controller.FicheajouController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Table for displaying records -->
+    <TableView fx:id="tableFiches" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="560.0">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="100.0" />
+            <TableColumn fx:id="colPatientId" text="Patient ID" prefWidth="150.0" />
+            <TableColumn fx:id="colDescription" text="Description" prefWidth="200.0" />
+            <TableColumn fx:id="colDateCreation" text="Date de Création" prefWidth="150.0" />
+        </columns>
+    </TableView>
+
+    <!-- Input fields for adding new Fiche -->
+    <TextField fx:id="patientIdTextField" layoutX="20.0" layoutY="340.0" prefWidth="150.0" promptText="Patient ID"/>
+    <TextField fx:id="descriptionTextField" layoutX="180.0" layoutY="340.0" prefWidth="150.0" promptText="Description"/>
+    <TextField fx:id="dossierMedicaleTextField" layoutX="340.0" layoutY="340.0" prefWidth="150.0" promptText="Dossier Médicale"/>
+    <TextField fx:id="cinTextField" layoutX="500.0" layoutY="340.0" prefWidth="150.0" promptText="CIN"/>
+
+    <TextField fx:id="nomPrenomTextField" layoutX="20.0" layoutY="380.0" prefWidth="150.0" promptText="Nom &amp; Prénom"/>
+    <DatePicker fx:id="datePicker" layoutX="180.0" layoutY="380.0" prefWidth="150.0"/>
+    <TextField fx:id="heureTextField" layoutX="340.0" layoutY="380.0" prefWidth="150.0" promptText="Heure"/>
+    <ComboBox fx:id="statutComboBox" layoutX="500.0" layoutY="380.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Actif"/>
+                <String fx:value="Inactif"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Buttons for actions -->
+    <Button fx:id="btnAjouter" text="Ajouter" layoutX="20.0" layoutY="420.0" onAction="#insertFicheMedicale"/>
+    <Button fx:id="btnModifier" text="Modifier" layoutX="120.0" layoutY="420.0" />
+    <Button fx:id="btnSupprimer" text="Supprimer" layoutX="220.0" layoutY="420.0" />
+</AnchorPane>

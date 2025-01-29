@@ -1,5 +1,11 @@
 package com.example.demo.model;
 
+import com.example.demo.util.DatabaseUtil;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,19 +35,26 @@ public class Patient {
     // Default Constructor
     public Patient() {}
 
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNom() {
         return nom;
     }
 
+    public static int getId(String nom) {
+        String sql = "SELECT id FROM patients WHERE nom = ?";
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, nom);  // Set the patient name parameter
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("id"); // Return the ID if found
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1; // Return -1 if no patient is found
+    }
     public void setNom(String nom) {
         this.nom = nom;
     }

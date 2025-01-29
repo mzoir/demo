@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.util.DatabaseUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +19,12 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        boolean isConnected = DatabaseUtil.isDatabaseConnected();
+        if (isConnected) {
+            System.out.println("Proceed with your database operations.");
+        } else {
+            System.out.println("Cannot proceed, database is not connected.");
+        }
         launch();
     }
 }

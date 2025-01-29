@@ -26,7 +26,7 @@
                 <Button text="Gérer Rendez-Vous" onAction="#handleRendezVous" styleClass="button-action"/>
 
                 <!-- Button to manage patients -->
-                <Button text="Gérer Patient" onAction="#goToPatientPage" styleClass="button-action"/>
+                <Button text="Gérer Patient" onAction="#gotoPatients" styleClass="button-action"/>
 
                 <!-- Button to manage medical records -->
                 <Button text="Gérer Fiche Médicale" onAction="#goToMedicalRecordPage" styleClass="button-action"/>
